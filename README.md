@@ -2,6 +2,24 @@
 
 Single-file Python script that reports token usage, API-equivalent cost and tool calls for Claude Code sessions. Standard library only, Python 3.8+.
 
+## Install
+
+macOS / Linux:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Kartik-Boreda-Imprivata/claude-sessions-viewer/main/install.sh | bash
+```
+
+Windows (PowerShell):
+
+```powershell
+curl -fsSL https://raw.githubusercontent.com/Kartik-Boreda-Imprivata/claude-sessions-viewer/main/install.ps1 | iex
+```
+
+If `curl | iex` splits the script into lines and errors on Windows, use `irm ... | iex` instead (`Invoke-RestMethod`, same URL).
+
+Either installs a `csr` command. Run it with no arguments for `--tui` on the default `~/.claude` config; any arguments are passed straight through to the script (`csr --detail`, `csr --compare ID1 ID2`, etc.).
+
 ## Usage
 
 ```bash
